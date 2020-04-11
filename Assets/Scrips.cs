@@ -12,6 +12,7 @@ public class Scrips : MonoBehaviour {
         rotSpeed = 35f;
         Turret = gameObject.transform.GetChild(0).transform;
         var sss = 1;
+        var ttt = 2;//更改动力学模型
 	}
 
 	// Update is called once per frame
