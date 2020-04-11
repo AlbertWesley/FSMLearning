@@ -15,7 +15,20 @@ public class Scrips : MonoBehaviour {
         var ttt = 2;//更改动力学模型
 	}
 
-
+	// Update is called once per frame
+	void Update () {
+        UpdateControl();
+	}
+    void UpdateControl()
+    {
+        Plane playerPlane = new Plane(Vector3.up, transform.position);
+        Ray RayCast = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float dist = 0;
+        if(playerPlane.Raycast(RayCast,out dist))
+        {
+            Vector3 rayHitPoint = RayCast.GetPoint(dist);
+            Quaternion targetRotation = Quaternion.LookRotation(rayHitPoint - transform.position);
+            Turret.rotation = Quaternion.Slerp(Turret.rotation, targetRotation, 0.05f);
         }
         if(Input.GetKey(KeyCode.W))
         {
