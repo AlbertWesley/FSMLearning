@@ -11,6 +11,7 @@ public class Scrips : MonoBehaviour {
 	void Start () {
         rotSpeed = 35f;
         Turret = gameObject.transform.GetChild(0).transform;
+        var sss = 1;
 	}
 
 	// Update is called once per frame
