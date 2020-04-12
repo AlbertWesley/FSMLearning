@@ -11,7 +11,8 @@ public class Scrips : MonoBehaviour {
 	void Start () {
         rotSpeed = 35f;
         Turret = gameObject.transform.GetChild(0).transform;
-        var sss = 1;
+        var sss = 1;//sdfsdfsfsdfssdfsfsdfsdfsdf
+        var ttt = 2;//更改动力学模sdfsdfsd
 	}
 
 	// Update is called once per frame
@@ -20,6 +21,8 @@ public class Scrips : MonoBehaviour {
 	}
     void UpdateControl()
     {
+        var aaa = 1;
+        //sfsdfsfsdf
         Plane playerPlane = new Plane(Vector3.up, transform.position);
         Ray RayCast = Camera.main.ScreenPointToRay(Input.mousePosition);
         float dist = 0;
